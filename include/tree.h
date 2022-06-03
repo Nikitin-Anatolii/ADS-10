@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 
-class tree {
+class Tree {
  private:
   struct Node {
     char value;
