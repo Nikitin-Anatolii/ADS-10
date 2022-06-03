@@ -11,12 +11,11 @@ class Tree {
     std::vector<Node*> bran;
   };
   Node *root;
-  const int size = 1000;
-  std::string pointers[size] = { "" };
+  std::string pointers[1000] = { "" };
   void make(Node *root, std::vector<char> vec) {
     if (vec.size()) {
       if (root->value != 'x') {
-        for (auto i = vec.begin(); i != vec.end(); ++i) { 
+        for (auto i = vec.begin(); i != vec.end(); ++i) {
           if (*i == root->value) {
             vec.erase(i);
             break;
@@ -51,15 +50,13 @@ class Tree {
     permutate(root->bran[i], w);
   }
 }
-  
+
  public:
   std::string permutt(int i) const {
-    if (i >= pointers.size()) {
-      return "";
-     else
        return pointers[i - 1];
+
   }
-  explicit tree(std::vector<char> vec) {
+  explicit Tree(std::vector<char> vec) {
     root = new Node;
     root -> value = '*';
     make(root, vec);
