@@ -54,7 +54,6 @@ class Tree {
  public:
   std::string permutt(int i) const {
        return pointers[i - 1];
-
   }
   explicit Tree(std::vector<char> vec) {
     root = new Node;
